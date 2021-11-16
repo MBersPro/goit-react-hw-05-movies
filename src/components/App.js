@@ -3,6 +3,7 @@ import Navigation from "./navigation/Navigation";
 import { routes } from "../utils/routes";
 import { Switch, Route } from "react-router-dom";
 import FilmDetails from "./pages/filmDetails/FilmDetails";
+import { Redirect } from "react-router";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
             />
           ))}
           <Route path="/movies/:id" component={FilmDetails} />
+          <Redirect to="/"/>
         </Switch>
       </Suspense>
     </>

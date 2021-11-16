@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types"
+
 import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router";
 const QueryFilms = ({ films }) => {
@@ -20,5 +22,9 @@ const QueryFilms = ({ films }) => {
     </ul>
   );
 };
+
+QueryFilms.propTypes = {
+  films: PropTypes.object.isRequired
+}
 
 export default QueryFilms;

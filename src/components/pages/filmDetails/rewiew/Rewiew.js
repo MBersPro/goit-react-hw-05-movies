@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { rewiewApi } from "../../../../utils/Api";
+import PropTypes from "prop-types";
 
 const Rewiew = ({ id }) => {
   const [rewiew, setRewiew] = useState([]);
@@ -23,5 +24,9 @@ const Rewiew = ({ id }) => {
     </>
   );
 };
+
+Rewiew.propTypes = {
+  id: PropTypes.string.isRequired
+}
 
 export default Rewiew;

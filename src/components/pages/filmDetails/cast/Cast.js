@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { castApi } from "../../../../utils/Api";
+import PropTypes from "prop-types";
 
 const Cast = ({ id }) => {
   const [actors, setActors] = useState([]);
@@ -28,5 +29,9 @@ const Cast = ({ id }) => {
     </>
   );
 };
+
+Cast.propTypes = {
+  id: PropTypes.string.isRequired
+}
 
 export default Cast;
